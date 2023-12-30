@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+.homepage-main{
+    background-image: url("https://source.unsplash.com/random");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+}
+.date{
+    width: 100%;
+    display: flex;
+    z-index: 999;
+}
+/* .go{
+    display: inherit;
+} */
+.joke-content{
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.16);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.7px);
+-webkit-backdrop-filter: blur(2.7px);
+border: 1px solid transparent;
+font-weight: lighter;
+opacity: 0.9;
+}
+.quote-content{
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.16);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.7px);
+-webkit-backdrop-filter: blur(2.7px);
+border: 1px solid transparent;
+font-weight: lighter;
+opacity: 0.9;
+}
+/* @media (max-width: 1100px){
+    .go{
+        display: none;
+    }
+}
+@media (max-width: 1000px){
+    .go{
+        display: none;
+    }
+}
+@media (max-width: 800px){
+    .go{
+        display: none;
+    }
+}
+@media (max-width: 600px){
+    .go{
+        display: none;
+    }
+}
+@media (max-width: 400px){
+    .go{
+        display: none;
+    }
+}
+@media (max-width: 200px){
+    .go{
+        display: none;
+    }
+} */
+.homepage{
+    overflow: hidden;
+}
+.homepage-main{
+    overflow: hidden;
+}
+.anywhere{
+    font-family: 'Poppins', sans-serif;
+}

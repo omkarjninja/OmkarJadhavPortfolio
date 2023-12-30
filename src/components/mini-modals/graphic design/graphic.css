@@ -1,0 +1,13 @@
+
+.hey{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-x{
+    background-color: transparent;
+    border: 0px solid transparent;
+    color: white;
+    font-size: 30px;
+  }
+  

@@ -1,0 +1,24 @@
+.slow{
+ animation: hide 2s 1 ease-out;
+}
+@keyframes hide{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.up{
+    padding: 0px;
+    margin: 0px;
+}
+.down{
+    margin-top: 2px;
+}
+.grp{
+    text-align: center;
+}
+.fast{
+    animation: show 2s 1 ease-in;
+   }
+   @keyframes show{
+       0%{opacity: 0;}
+       100%{opacity: 1;}
+   }

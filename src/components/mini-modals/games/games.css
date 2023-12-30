@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.hey{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-x{
+    background-color: transparent;
+    border: 0px solid transparent;
+    color: white;
+    font-size: 30px;
+  }
+
+ .sps-head {
+  font-family: 'Josefin Sans', sans-serif;
+ }
+ .sps-para{
+  font-family: 'Josefin Sans', sans-serif;
+ }
+ .sci{
+  scale: 0.9;
+  transition: all 2ms ease-in-out;
+  filter: grayscale(0.75);
+ }
+.sci:hover{
+  /* border: 1px solid white; */
+  scale: 1.1;
+  filter: grayscale(0);
+}
+.comp{
+  scale: 0.7;
+  transition: all 2ms ease-in-out;
+  filter: grayscale(0.75);
+}
+.comp:hover{
+  /* border: 1px solid white; */
+  scale: 0.9;
+  filter: grayscale(0);
+}
+.comp-btn{
+  font-family: 'Josefin Sans', sans-serif;
+  border-right: 5px solid;
+  border-right-color: white;
+  float: right;
+}
+
+
+/* quiz */
+.herechange{
+  opacity: 1;
+animation: change 5s;
+animation-iteration-count: 1;
+}
+@keyframes change{
+  0%{opacity: 1;}
+  100%{opacity: 0;display: none;}
+}
+.choice-box{
+  display: block;
+}
+.choice-box-hidden{
+  display: none;
+}
+.question-box{
+  display: block;
+}
+.question-box-hidden{
+  display: none;
+}
+.quiz-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  overflow: hidden;
+}
+.results-hidden{
+  display: none;
+}
+.results-show{
+  display: block;
+}
+.qbox-hidden{
+  display: none;
+}
+.qbox-show{
+  display: block;
+}

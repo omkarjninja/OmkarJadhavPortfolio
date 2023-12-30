@@ -1,0 +1,105 @@
+.footer-icon-box{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding-right: 5px;
+    /* margin-bottom: 25px; */
+}
+.text-footer{
+    font-size: 15px;
+    position: absolute;
+    transform: translateX(-40px);
+    transform: translateY(-40px);
+    color: white;
+    display: none;
+    transition: all 10s ease-in-out;
+    /* From https://css.glass */
+background: white(255, 255, 255, 0.14);
+border-radius: 2px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+padding: 2px;
+z-index: 999;
+}
+
+.footer-icon-box:hover p{
+    display: block;
+}
+.github{
+    width: 45px;
+    margin: 0 10px;
+    margin-top: 5px;
+
+}
+.linkedin{
+    width: 45px;
+    margin: 0 10px;
+    margin-top: 5px;
+}
+
+/* .both{
+    display: flex;
+    justify-content: space-between;
+    background-color: pink;
+} */
+
+.footer-icon{
+    border-radius: 10px;
+    margin: 2px 10%;
+    /* width: 45px; */
+}
+/* .footer-icon-box:hover{
+    background-color: red;
+} */
+.footer-icon-box:hover{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+.git{
+    width: 40px;
+    /* margin: 0 10px; */
+    margin-top: 2.5px;
+    margin-left: 15%;
+}
+.git:hover{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+/* .row{
+    display: flex;
+    width: 50px;
+} */
+
+/* contact section */
+.socials__btns a {
+    --size: 2.5em;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @apply bg-gray-700;
+    transition: 0.3s;
+  }
+  .socials__btns a .icon {
+    font-size: 1.25em;
+    /* icon size */
+    @apply text-white;
+    /* icon color */
+    transition: color 0.3s, -webkit-transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: color 0.3s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: color 0.3s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), -webkit-transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .socials__btns a:hover {
+    @apply bg-sky-700;
+  }
+  .socials__btns a:hover .icon {
+    -webkit-transform: scale(1.2);transform: scale(1.2);
+    @apply text-white;
+  }

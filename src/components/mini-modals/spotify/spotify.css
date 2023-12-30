@@ -1,0 +1,15 @@
+.special_modal_spotify .modal-content{
+    background-color:#F3F4F6;
+    color: #fff;  
+ }
+ .hey{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-x{
+    background-color: transparent;
+    border: 0px solid transparent;
+    color: white;
+    font-size: 30px;
+  }

@@ -1,0 +1,50 @@
+/* .modal-backdrop {
+    background-color: red;
+ }
+ .modal { 
+    background-color: red !important; 
+ } */
+ /* .special_modal .modal-content{
+    background-color:#303030;
+    color: #fff;  
+ } */
+ .special_modal .modal-content{
+  background-color:black;
+  color: #fff;  
+}
+ .close{opacity: 1} .close span{color: #fff}
+ .whole{
+   display: flex;
+ }
+ .whole-img{
+   border: 20px;
+ }
+ .whole-para{
+   margin-top: 0px;
+   font-size: 10px;
+ }
+ .screenshot{
+   width: auto;
+   height: 45vh;
+ }
+ .full-whole{
+   display: flex;
+   flex-direction: column;
+ }
+ /* .special_modal closeButton{
+  color: whitesmoke;
+} */
+.hey{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-x{
+  background-color: transparent;
+  border: 0px solid transparent;
+  color: white;
+  font-size: 30px;
+}
+.x{
+  --tw-ring-color:white;
+}

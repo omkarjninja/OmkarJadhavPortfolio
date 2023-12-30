@@ -1,0 +1,58 @@
+.icon-box{
+    width: 70px;
+    background: transparent;
+    cursor: pointer;
+}
+.icon-box:hover{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+.icon{
+    border-radius: 10px;
+    margin: 0 10%;
+    width: 50px;
+}
+@media (max-width: 1400px){
+    .icon{
+        margin: 0 5%;
+        width: 50px;
+    }
+}
+@media (max-width: 1200px){
+    .icon{
+        margin: 0 5%;
+        width: 50px;
+    }
+}
+@media (max-width: 1000px){
+    .icon{
+        margin: 0 5%;
+        width: 50px;
+    }
+}
+@media (max-width: 800px){
+    .icon{
+        margin: 0 5%;
+        width: 45px;
+    }
+}
+@media (max-width: 600px){
+    .icon{
+        margin: 0 5%;
+        width: 45px;
+    }
+}
+@media (max-width: 400px){
+    .icon{
+        margin: 0 5%;
+        width: 40px;
+    }
+}
+@media (max-width: 200px){
+    .icon{
+        margin: 0 5%;
+        width: 40px;
+    }
+}
