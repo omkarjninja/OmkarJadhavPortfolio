@@ -288,8 +288,8 @@ xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455"  >
 
 </center>
 <div className="grid grid-cols-3 gap-1 py-1.5 sm:grid-cols-3 sm:gap-4">
-<dt className="font-medium text-slate-100 text-right">OldSite</dt>
-<dd className="text-gray-700 sm:col-span-2"><a target="_blank" className="pl-2 no-underline text-slate-200" href="https://omkarjninja.github.io/OmkarJ/">Old Portfolio</a></dd>
+<dt className="font-medium text-slate-100 text-right">Website</dt>
+<dd className="text-gray-700 sm:col-span-2"><a target="_blank" className="pl-2 no-underline text-slate-200" href="https://radiant-squirrel-cd45c4.netlify.app/">Portfolio</a></dd>
 </div>
 </dl>
 </div>
