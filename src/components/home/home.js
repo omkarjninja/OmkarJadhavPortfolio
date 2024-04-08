@@ -72,7 +72,7 @@ console.log(quote.length)
 >
   {/* <div className="h-32 rounded-lg bg-transparent" onClick={Change}> */}
     <center>
-    <p className="font-semibold text-2xl cursor-pointer anywhere" onClick={Change}>Click anywhere to Continue</p>
+    <p className="font-semibold text-2xl cursor-pointer anywhere" onClick={Change}>Click anywhere to Continue!</p>
     </center>
 
   {/* </div> */}
