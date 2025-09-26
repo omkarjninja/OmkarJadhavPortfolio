@@ -3,12 +3,12 @@ import { useState } from "react";
 function WeatherModal(props){
     const lati = props.lat;
     const longi = props.log;
-    const API_KEY = 'f94e29a28c6701444dd46bf288788198'; // Replace with your actual API key
+    const API_KEY = process.env.REACT_APP_WEATHER_API_KEY; // API key from environment
     const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [boxclass, setBoxclass] = useState('hidden');
   const [btnclass, setbtnclass] = useState('');
-  const [usedate,setDate]= useState(new Date());
+  const [usedate] = useState(new Date());
   let date=usedate.toLocaleDateString('default', { weekday: 'long' })
   let day=usedate.toLocaleDateString('default',{day:"numeric"})
   let Month=usedate.toLocaleDateString('default', { month: 'long' })
@@ -40,7 +40,7 @@ function WeatherModal(props){
 
       }
 
-console.log(weatherData)
+
 
     return(
         <>

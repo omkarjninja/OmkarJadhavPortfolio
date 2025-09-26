@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { CloseButton } from 'react-bootstrap';
 import Spotify from './spotify';
 import "./spotify.css"
+import EnhancedSpotify from './EnhancedSpotify';
 
 function SpotifyModal(props){
   const [showProject, setShowProject] = useState(false);
@@ -29,7 +30,9 @@ function SpotifyModal(props){
                 <div class="rounded-full w-3 h-3 bg-green-500"></div> */}
             
        <Modal.Body>
-       <Spotify></Spotify>
+       {/* <Spotify></Spotify> */}
+       <EnhancedSpotify/>
+
        </Modal.Body>
      </Modal>
       <center>

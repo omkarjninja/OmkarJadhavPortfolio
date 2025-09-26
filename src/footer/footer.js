@@ -1,5 +1,5 @@
 import './footer.css'
-import { useState , useEffect } from 'react';
+import { useState } from 'react';
 import Clock from 'react-live-clock';
 import Icon from '../assets/icons/icon.png';
 import pc from "../assets/icons/pc.ico";import resume from "../assets/icons/resume.png";
@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import pp from "../../assets/images/pp.png"
 import xd from ".././assets/images/profile.jpg";
 import { FaWindowMinimize } from "react-icons/fa";
-
+import EnhancedSpotify from '../components/mini-modals/spotify/EnhancedSpotify';
 
 import AudioPlayer from 'react-h5-audio-player';
 import Playlist from 'react-h5-audio-player'
@@ -26,13 +26,13 @@ import s9 from ".././assets/audio/looking.mp3";import q1 from ".././assets/audio
 import q3 from ".././assets/audio/onmyway.mp3";import q4 from ".././assets/audio/parting.mp3";import q5 from ".././assets/audio/playdate.mp3";
 import q6 from ".././assets/audio/pouring.mp3";import q7 from ".././assets/audio/sao.mp3";import q8 from ".././assets/audio/space.mp3";
 import q9 from ".././assets/audio/telephone.mp3";import w1 from ".././assets/audio/vilen.mp3";
-import SpotifyModal from '../components/mini-modals/spotify/spotifymodal';
+import SpotifyModal from '../components/mini-modals/spotify/spotifymodal';  
 
-const API_KEY = 'f94e29a28c6701444dd46bf288788198';
+
 const skills=[
-    {skill:"HTML5",color:"rose-600/20"},
-    {skill:"CSS3",color:"indigo-700/20"},
-    {skill:"Bootstrap",color:"rose-600/20"},
+    {skill:"Angular",color:"rose-600/20"},
+    {skill:"NextJS",color:"indigo-700/20"},
+    {skill:".NET",color:"rose-600/20"},
     {skill:"TailwindCSS",color:"indigo-700/20"},
     {skill:"JavaScript",color:"rose-600/20"},
     {skill:"ReactJS",color:"indigo-700/20"},
@@ -43,11 +43,17 @@ const skills=[
     {skill:"MySQL",color:"rose-600/20"},
     {skill:"TypeScript",color:"indigo-700/20"},
     {skill:"Git",color:"rose-600/20"},
+    {skill:"React Native",color:"indigo-700/20"},
   
   ]
 
 
 function Footer(props){
+    const [showSpotifyNew, setShowSpotifyNew] = useState(false);
+ 
+  const SpotifyClose = () => setShowSpotifyNew(false);
+  const SpotifyShow = () => setShowSpotifyNew(true);
+
     const [showProject, setShowProject] = useState(false);
  
     const handleClose = () => setShowProject(false);
@@ -102,7 +108,7 @@ function Footer(props){
             link:"https://www.instagram.com/omkar_jadhav_ninja/"
         }
     ]
-    const [usedate,setDate]= useState(new Date());
+    const [usedate] = useState(new Date());
 
 
 
@@ -143,7 +149,7 @@ function Footer(props){
   };
       
       const handleEnd = () => {
-        console.log('end')
+
         setTrackIndex((currentTrack) =>
                 currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
             );
@@ -167,7 +173,7 @@ function Footer(props){
          class="flex-shrink-0 object-cover object-center btn- flex w-16 h-16 mr-auto -mb-8 ml-auto rounded-full shadow-xl"></img>
                    <p class="mt-8 text-2xl font-semibold leading-none text-white tracking-tighter lg:text-3xl">Omkar
         Jadhav</p>
-        <p class="mt-1.5 text-base leading-relaxed text-center text-white opacity-80">Full Stack Web Developer</p>
+        <p class="mt-1.5 text-base leading-relaxed text-center text-white opacity-80">Full Stack Developer</p>
                   <div className="flex items-center mt-4 sm:mt-6 w-full">
                     
                       <div className="flow-root">
@@ -289,7 +295,7 @@ xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455"  >
 </center>
 <div className="grid grid-cols-3 gap-1 py-1.5 sm:grid-cols-3 sm:gap-4">
 <dt className="font-medium text-slate-100 text-right">Website</dt>
-<dd className="text-gray-700 sm:col-span-2"><a target="_blank" className="pl-2 no-underline text-slate-200" href="https://radiant-squirrel-cd45c4.netlify.app/">Portfolio</a></dd>
+<dd className="text-gray-700 sm:col-span-2"><a target="_blank" className="pl-2 no-underline text-slate-200" href="https://jadhavomkar.netlify.app/">Portfolio</a></dd>
 </div>
 </dl>
 </div>
@@ -309,6 +315,16 @@ xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455"  >
       </div>
   </div>
 </Modal>
+<Modal dialogClassName='model' size='xl' show={showSpotifyNew} onHide={SpotifyClose} className='special_modal_spotify'>
+                <div className='hey'>
+          <h2 className='spotify-title text-black mt-3 ml-3'>Omkar's Favorite Music!</h2> <div class="rounded-full w-5 h-5 bg-red-500 mt-3 mr-3" onClick={SpotifyClose}></div>
+          </div>
+            
+       <Modal.Body>
+       <EnhancedSpotify/>
+
+       </Modal.Body>
+     </Modal>
 
 
 
@@ -387,16 +403,15 @@ className={`footer-music fixed bottom-14  end-4 z-50 flex rounded-3xl items-cent
             <Weather lat={lat} log={log}></Weather>
             </div>
             <div>
-            <div className="footer-icons">
+            <div className="footer-icons py-2">
         {/* <Icon></Icon>
         <Icon></Icon>
         <Icon></Icon>
         <Icon></Icon>
         <Icon></Icon> */}
         <FooterIcon image={Icons[0].img} link={Icons[0].link}   name={Icons[0].name} clicking={handleShow} class={"flex md:flex"} ></FooterIcon>
-        {/* <FooterIcon  image={Icons[1].img}  link={Icons[1].link}   name={Icons[1].name}></FooterIcon> */}
         <FooterIcon  image={Icons[2].img} link={Icons[2].link} git="git"  name={"Github"} clicking={gogithub} class={"hidden md:flex lg:flex sm:hidden"}></FooterIcon>
-        <FooterIcon  image={Icons[3].img}  link={Icons[3].link}  name={Icons[3].name} clicking={spotfiyopenhandler} class={"hidden md:flex lg:flex sm:hidden"}></FooterIcon>
+        <FooterIcon  image={Icons[3].img}  link={Icons[3].link}  name={Icons[3].name} clicking={SpotifyShow} class={"hidden md:flex lg:flex sm:hidden"}></FooterIcon>
         {/* <FooterIcon  image={Icons[4].img}  link={Icons[4].link}   name={Icons[4].name}></FooterIcon> */}
         </div>
             </div>
@@ -412,3 +427,8 @@ className={`footer-music fixed bottom-14  end-4 z-50 flex rounded-3xl items-cent
     )
 }
 export default Footer;
+
+
+<>
+       
+      </>

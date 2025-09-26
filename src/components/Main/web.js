@@ -9,7 +9,7 @@ import link from '../../assets/icons/linkedin.png'; import graphic from '../../a
 import Projects from "../mini-modals/projects";import social from '../../assets/icons/socials.ico';
 import tools from '../../assets/icons/Tools.ico';import games from '../../assets/icons/games.ico';
 import Graphic from "../mini-modals/graphic design/graphic";
-import pdfi from "../../assets/files/finalresume.pdf"
+import pdfi from "../../assets/files/resumefinal2.pdf"
 import VSModal from "../mini-modals/vs-code/vsmodal";
 import Terminal from "../mini-modals/terminal/terminal";
 import SpotifyModal from "../mini-modals/spotify/spotifymodal";
@@ -27,42 +27,26 @@ function AppLayout(props){
         <>
        <div className="lg:w-1/2 sm:w-full">
        <div className="grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-4 md:grid-cols-4 xs:grid-cols-3 lg:gap-2 pt-4">
-    {/* <div className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0">
-    
-    </div> */}
-    {/* <Feature className="lg:h-24 sm:h-24 rounded-lg bg-transparent p-0"
-    image={projects}
-    name="Projects">
-    </Feature> */}
+
+
     <Projects  className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0" 
     image={projects}
     name="Projects"
     >
     </Projects>
-  {/* <Feature className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={spotify}
-  name="Spotify">
-  </Feature> */}
+
     <SpotifyModal className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
   image={spotify}
   name="Spotify"
     >
     </SpotifyModal>
 
-  {/* <Feature className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={graphic}
-  name="Graphic Design">
-  </Feature> */}
+
   <Graphic  className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
   image={graphic}
   name="Graphics">
   </Graphic>
-  {/* <Feature className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={coffee}
-  name="Coffee"
-  link="https://www.buymeacoffee.com/omkarjadhav">
-  
-  </Feature> */}
+
   <SocialModal className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
   image={social}
   name="Social"
@@ -83,15 +67,8 @@ function AppLayout(props){
   name="Resume"
   link={pdfi}>
   </Feature>
-  {/* <Feature className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={twitter}
-  name="Twitter"
-  link="https://twitter.com/omkarjadhavninj">
-  </Feature> */}
-  {/* <Feature className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={term}
-  name="Terminal">
-  </Feature> */}
+
+
   <Terminal className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
   image={term}
   name="Terminal"
@@ -99,30 +76,20 @@ function AppLayout(props){
   </Terminal>
 
 
-  {/* <Feature className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={vs}
-  name="VS Code">
-  </Feature> */}
+
   <VSModal  className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
   image={vs}
   name="VS Code"
   > 
   </VSModal>
-  {/* <SocialModal className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={tools}
-  name="Tools"
-  > */}
+
     <ToolsModal  className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
   image={tools} lat={val1} log={val2}
   name="Tools">
       
     </ToolsModal>
-  {/* </SocialModal> */}
-  {/* <SocialModal className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={games}
-  name="Games"
-  >
-  </SocialModal> */}
+
+
   <GamesModal className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
   image={games}
   name="Games">
@@ -133,16 +100,8 @@ function AppLayout(props){
   name="FullScreen">
 
   </FullScreen>
-  {/* <Feature className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={Insta}
-  name="Instagram"
-  link="https://www.instagram.com/omkar_jadhav_ninja/">
-  </Feature> */}
-  {/* <Feature className="lg:h-24 sm:h-8 md:h-12 rounded-lg bg-transparent p-0"
-  image={link}
-  name="Linkedin"
-  link="https://www.linkedin.com/in/omkar-jadhav-a09878249/">
-  </Feature> */}
+
+
 
 </div>
 

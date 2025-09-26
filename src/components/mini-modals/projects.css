@@ -1,50 +1,119 @@
-/* .modal-backdrop {
-    background-color: red;
- }
- .modal { 
-    background-color: red !important; 
- } */
- /* .special_modal .modal-content{
-    background-color:#303030;
-    color: #fff;  
- } */
- .special_modal .modal-content{
-  background-color:black;
-  color: #fff;  
-}
- .close{opacity: 1} .close span{color: #fff}
- .whole{
+/* ========================================================================= */
+/* 1. Project Card (Thumbnail on Desktop/in Gallery) - Tailwind friendly classes */
+/* ========================================================================= */
+
+.whole {
    display: flex;
- }
- .whole-img{
-   border: 20px;
- }
- .whole-para{
+}
+.whole-img {
+   border: 20px; /* This seems like a typo; assuming you meant border-radius or padding */
+}
+.whole-para {
    margin-top: 0px;
    font-size: 10px;
- }
- .screenshot{
+   color: #ccc; /* Ensure text is visible against a dark card background */
+}
+.screenshot {
+   /* We use flex/grid in the component now, so this height is for context */
    width: auto;
    height: 45vh;
- }
- .full-whole{
+}
+.full-whole {
    display: flex;
    flex-direction: column;
- }
- /* .special_modal closeButton{
-  color: whitesmoke;
-} */
-.hey{
+}
+
+/* ========================================================================= */
+/* 2. Modal Overrides (OS Window/Glass-morphism Frame) */
+/* ========================================================================= */
+
+/* IMPORTANT: Ensure the modal is styled for glass-morphism */
+/* This ensures the modal window frame is transparent and blurred */
+.os-window-modal .modal-content {
+    /* Remove default Bootstrap styling */
+    background: transparent !important;
+    border: none !important;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    
+    /* Glass-morphism effect */
+    background-color: rgba(30, 30, 40, 0.8) !important; 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    height: 90vh; 
+}
+
+/* Base style for all content inside the window */
+.os-window-body {
+    padding: 0 !important;
+    color: white;
+    flex-grow: 1;
+    overflow: hidden; 
+}
+
+
+/* ========================================================================= */
+/* 3. Custom Header Integration (Retaining your '.hey' structure) */
+/* ========================================================================= */
+
+/* We use the .os-window-header class in the component now, 
+   but style it based on your desired layout. */
+.os-window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: grab;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05); 
+    flex-shrink: 0;
+}
+
+/* Your original 'hey' class now dictates the internal layout */
+.hey {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Ensure title and button are centered vertically */
+  /* If you are using this inside os-window-header, it's mostly redundant but safe */
 }
-.btn-x{
+
+/* Your custom close button */
+.btn-x {
   background-color: transparent;
   border: 0px solid transparent;
   color: white;
   font-size: 30px;
+  /* Add hover effect for UX */
+  transition: color 0.15s, background-color 0.15s;
+  padding: 0 10px;
+  line-height: 1;
 }
-.x{
-  --tw-ring-color:white;
+
+.btn-x:hover {
+  background-color: #dc3545; /* Red background on hover, like a native close button */
+  color: white;
+  border-radius: 4px;
+}
+
+/* Class for text inside the button (if used) */
+.x {
+  --tw-ring-color:white; /* This is a Tailwind variable, best handled directly in the component */
+}
+
+/* Original modal class, useful if you need to override just the content */
+.special_modal .modal-content{
+  background-color:black;
+  color: #fff;  
+}
+
+/* Ensure the title text is visible and styled */
+.os-window-title {
+    font-size: 1.25rem; /* Slightly larger title for the main project window */
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    user-select: none;
 }
