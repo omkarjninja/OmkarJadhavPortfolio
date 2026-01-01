@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route,Navigate } from 'react-router-dom';
 import Home from './components/home/home';
 import Screen from './components/Main/window-screen';
 import DesktopOS from './components/Main/Desktop';
@@ -34,6 +34,10 @@ function App() {
     <Route path='/' element={<Home></Home>} />
     <Route path='/main' element={<Screen lat={lati} log={long}></Screen>} />
     <Route path='/mac' element={<DesktopOS></DesktopOS>} />
+    <Route 
+        path='/ninja-arcx' 
+        element={<Navigate to="https://ninja-arcx.vercel.app/" replace />} 
+    />
     </Routes>
     {/* // <FloatingMusicPlayer /> */}
     <FloatingMusicPlayer />
