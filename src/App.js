@@ -34,10 +34,6 @@ function App() {
     <Route path='/' element={<Home></Home>} />
     <Route path='/main' element={<Screen lat={lati} log={long}></Screen>} />
     <Route path='/mac' element={<DesktopOS></DesktopOS>} />
-    // <Route 
-    //     path='/ninja-arcx' 
-    //     element={<div>{window.location.href = 'https://ninja-arcx.vercel.app/'}</div>} 
-    // />
     </Routes>
     {/* // <FloatingMusicPlayer /> */}
     <FloatingMusicPlayer />
